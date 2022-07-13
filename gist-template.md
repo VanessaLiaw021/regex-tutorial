@@ -42,7 +42,7 @@ In regex, anchors are consider tokens that doesn't match any characters but it i
 ^ and $
 ```
 
-To understand anchors a little better, the beginning symbol in regex is ^. The symbol ^ represent the beginning of a string. You must wonder if there is a beginning, there must be an ending symbol, which there is. The symbol that represent the ending of a string is $. 
+To understand anchors a little better, the beginning symbol in regex is `^`. The symbol ^ represent the beginning of a string. You must wonder if there is a beginning, there must be an ending symbol, which there is. The symbol that represent the ending of a string is `$`. 
 
 ### Quantifiers
 
@@ -52,44 +52,47 @@ In regex, quantifiers are define as the minimum number of occurrences of a chara
 + and {}
 ```
 
-To understand quantifiers a little better, the + symbol is consider a greedy quantifier. It will allow repeats of the previous items one or more. But in this case, the + symbol which will connect the user email name + email service provider + .com after.
+To understand quantifiers a little better, the `+` symbol is consider a greedy quantifier. It will allow repeats of the previous items one or more. The `+` symbol which will connect the user email name + email service provider + .com after. In most cases `+` it is used for allowing repeats of the preceding token. Meaning it will allow duplicates of letters, numbers, and special characters to put it in a more simple explantation.
 
-As for the quanitifer {2, 6}, it represent the certain range of the characters that user can have. The minimum character would be 2 and the maximum character would be 6. This quantifier is only for this snippet of regex, [a-z\.].
+As for the quanitifer `{2, 6}`, it represent the certain range of the characters that user can have. The minimum character would be 2 and the maximum character would be 6. This quantifier is only for this snippet of regex, `[a-z\.]`. This part of the expression will only allow to be a length of 2-6.
+
+Sometime you might see brackets with just a single number, like this example `{2}`, this mean that it will match the pattern number of times. 
 
 ### Grouping Constructs
 
-Group constructs are consider the regex in the (). They represent should be capture in the inputted string. Inside the (), you are allow to add like quantifiers inside the (). For example, as mention before, you can add the symbol + or add a range for your regex.   
+Group constructs are consider the regex in the `()`. They represent should be capture in the inputted string. Inside the `()`, you are allow to add like quantifiers inside the `()`. For example, as mention before, you can add the symbol `+` or add a range for your regex.   
 
 ```
 ([a-z0-9_\.-]+) and ([\da-z\.-]+) and ([a-z\.]{2,6})
 ```
 
-First, we start with this section of regex, ([a-z0-9_\.-]+). This will match the email username. Next, we start with this section of regex, ([\da-z\.-]+). This will match the email service provider, such as gmail, yahoo, outlook, etc. 
-Lastly, we look at ([a-z\.]{2,6}). This will match the top level domain, such as .com, .net., .gov, and etc. In the next section, I will explain the characters in the (), which are known as subexpression.
+First, we start with this section of regex, `([a-z0-9_\.-]+)`. This will match the email username. Next, we start with this section of regex, `([\da-z\.-]+)`. This will match the email service provider, such as gmail, yahoo, outlook, etc. 
+
+Lastly, we look at `([a-z\.]{2,6})`. This will match the top level domain, such as .com, .net., .gov, and etc. In the next section, I will explain the characters in the (), which are known as subexpression.
 
 ### Bracket Expressions
 
-As we mention before, this section I will explain that is happening in the (). 
+As we mention before, this section I will explain that is happening in the (). Bracket expression are consider the set of pattern you want to match in your regex. For example, you can decide if you want uppercase, lowercase, numbers, or special characters to the email, username, or password. Well, in this case, we are focusing on setting the expression to validate the email.   
 
 ```
 ([a-z0-9_\.-]+) and ([\da-z\.-]+) and ([a-z\.]{2,6})
 ```
 
-Let's take a look at the first expression in this regex, ([a-z0-9_\.-]+). As we can see, within the (), we see something call a bracket expression, []. The bracket indicates a set of characters that we're trying to match in the expression. Let's start with the a-z, this can include any characters between a-z in the email. Often, we will also see 0-9, which is similar to a-z, but instead it including any numbers between 0-9. Next, we see a dash (-) and hyphen (_), this mean that in the email address it can include hypen and dash. The   hypen and dash are consider special charcters. Special characters are consider non-alphanumeric charcters.
+Let's take a look at the first expression in this regex, `([a-z0-9_\.-]+)`. As we can see, within the (), we see something call a bracket expression, []. Let's start with the a-z, this can include any characters between a-z in the email. Often, we will also see 0-9, which is similar to a-z, but instead it including any numbers between 0-9. Next, we see a dash (-) and hyphen (_), this mean that in the email address it can include hypen and dash. The hypen and dash are consider special charcters. Special characters are consider non-alphanumeric charcters.
 
-Now, let take a look at the next expression ([\da-z\.-]+). As we can see, there is another [] in this expression, where it is matching the email service provider, that can include alphabet from a-z. and can include a dash. In the next section, we will learn about the \d and \ .
+Now, let take a look at the next expression `([\da-z\.-]+)`. As we can see, there is another [] in this expression, where it is matching the email service provider, that can include alphabet from a-z. and can include a dash. In the next section, we will learn about the `\d` and `\` .
 
-Lastly, we take a look at ([a-z\.]{2,6}). There is another bracket inside of this expression, but we seen it all. It only will allow alphabet between a-z. Again, I will explain what the \ in the next section called Character Escapes. 
+Lastly, we take a look at `([a-z\.]{2,6})`. There is another bracket inside of this expression, but we seen it all. It only will allow alphabet between a-z. Again, I will explain what the `\` in the next section called Character Escapes. 
 
 ### Character Classes
 
-Now, learning about character classes, which is the expression below, the \d. 
+Now, learning about character classes, which is the expression below, the `\d`. Character classes are any character from a character class that is defined by a regex can appear in an input string to complete a match.
 
 ```
 \d
 ```
 
-In this tutorial it is seen in this expression ([\da-z\.-]+) where again it matching the email service provider. The meaning of \d is it matches any digit from 0-9, specifically arabic numeral.  
+In this tutorial it is seen in this expression `([\da-z\.-]+)` where again it matching the email service provider. The meaning of `\d` is it matches any digit from 0-9, specifically arabic numeral. It is similar to the `[0-9]` that we discussed before.   
 
 ### Character Escapes
 
@@ -100,6 +103,8 @@ In regex, there is something call an escapte character, which the symbol for thi
 ```
 
 The backslash can be seen throughout this regex example, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`. In this regex example, we mostly see an escaped character `\.` This basically mean it will match a period or dot "." character in validating the email to match the regex requirement.
+
+As we can see in this expression, `([\da-z\.-]+)\.([a-z\.]{2,6})`. Between the parenthesis, we see a `\.`, this mean that after this expression is matches, `([\da-z\.-]+)`. Then, it should precede with a `.` afterward, since we all know email require a .com, or other domain. In other words, by have `\.` in the regex expression, it cannot escape from adding the `.` in the email. Meaning it is like required to include in your email when regex is validating the input.  
 
 ## Author
 
