@@ -46,15 +46,21 @@ To understand anchors a little better, the beginning symbol in regex is ^. The s
 
 ### Quantifiers
 
+In regex, quantifiers are define as the minimum number of occurrences of a character, group, or character class required to find a match in the input. There are others quantifiers, but the one we focusing on will be the symbol of
+
+```
++ and {}
+```
+
+To understand quantifiers a little better, the + symbol is consider a greedy quantifier. It will allow repeats of the previous items one or more. But in this case, the + symbol which will connect the user email name + email service provider + .com after.
+
+As for the quanitifer {2, 6}, it represent the certain range of the characters that user can have. The minimum character would be 2 and the maximum character would be 6. This quantifier is only for this snippet of regex, [a-z\.].
+
 ### Grouping Constructs
 
 ### Bracket Expressions
 
 ### Character Classes
-
-### The OR Operator
-
-### Flags
 
 ### Character Escapes
 
