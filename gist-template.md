@@ -58,6 +58,18 @@ As for the quanitifer {2, 6}, it represent the certain range of the characters t
 
 ### Grouping Constructs
 
+Group constructs are consider the regex in the (). They represent should be capture in the inputted string. Inside the (), you are allow to add like quantifiers inside the (). For example, as mention before, you can add the symbol + or add a range for your regex.   
+
+```
+([a-z0-9_\.-]+) and ([\da-z\.-]+) and ([a-z\.]{2,6})
+```
+
+First, we start with this section of regex, ([a-z0-9_\.-]+). This will match the email username. a-z allow letters from a-z. 0-9 allow numbers from 0-9. The _ and - allows underscore and hypen in your email username. 
+
+Next, we start with this section of regex, ([\da-z\.-]+). This will match the email service provider, such as gmail, yahoo, outlook, etc. 
+
+Lastly, we look at ([a-z\.]{2,6}). This will match the top level domain, such as .com, .net., .gov, and etc. As mention before, a-z will allow letters from a-z, but allow the range {2,6} from 2 to 6 characters long.
+
 ### Bracket Expressions
 
 ### Character Classes
@@ -66,6 +78,6 @@ As for the quanitifer {2, 6}, it represent the certain range of the characters t
 
 ## Author
 
-My name is Vanessa Liaw and I am learning regex while I am explaining through this regex tutorial. It help me understand each symbol one by one and other regex component and understanding how to create my own regex. If you find this interesting, take a look at my other projects
+My name is Vanessa Liaw and I am learning regex while I am explaining through this regex tutorial. It help me understand each symbol one by one and other regex component and understanding how to create my own regex. If you find this interesting, take a look at my other projects and view my profile
 
 [Github Repo](https://github.com/VanessaLiaw021)
