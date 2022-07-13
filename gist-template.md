@@ -79,9 +79,25 @@ Let's take a look at the first expression in this regex, ([a-z0-9_\.-]+). As we 
 
 Now, let take a look at the next expression ([\da-z\.-]+). As we can see, there is another [] in this expression, where it is matching the email service provider, that can include alphabet from a-z. and can include a dash. In the next section, we will learn about the \d and \ .
 
+Lastly, we take a look at ([a-z\.]{2,6}). There is another bracket inside of this expression, but we seen it all. It only will allow alphabet between a-z. Again, I will explain what the \ in the next section called Character Escapes. 
+
 ### Character Classes
 
+Now, learning about character classes, which is the expression below, the \d. 
+
+```
+\d
+```
+
+In this tutorial it is seen in this expression ([\da-z\.-]+) where again it matching the email service provider. The meaning of \d is it matches any digit from 0-9, specifically arabic numeral.  
+
 ### Character Escapes
+
+
+
+```
+\
+```
 
 ## Author
 
