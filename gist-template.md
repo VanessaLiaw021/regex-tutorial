@@ -8,7 +8,7 @@ In this regex tutorial, I will be explaining how to use regular expression to ma
 The example regex pattern I will be explaining will be
 
 ```
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/. 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ 
 ```
 
 This regex expression is one way to match a email, but there other many different ways a person can match an email in regex, but for this example, we will use the one that is listed above. In this tutorial, I will break down each part and each symbol of the regex above and describing what it does.
@@ -93,14 +93,16 @@ In this tutorial it is seen in this expression ([\da-z\.-]+) where again it matc
 
 ### Character Escapes
 
-
+In regex, there is something call an escapte character, which the symbol for this would be a backslash \ . Escape character is basically represent a literal character, which will mostly follow by a quantifiers, such as `\.`, `\$`, `\+`, etc. In this case, we see `\.` as an example. 
 
 ```
 \
 ```
 
+The backslash can be seen throughout this regex example, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`. In this regex example, we mostly see an escaped character `\.` This basically mean it will match a period or dot "." character in validating the email to match the regex requirement.
+
 ## Author
 
-My name is Vanessa Liaw and I am learning regex while I am explaining through this regex tutorial. It help me understand each symbol one by one and other regex component and understanding how to create my own regex. If you find this interesting, take a look at my other projects and view my profile
+My name is Vanessa Liaw and I am learning regex while I am explaining through this regex tutorial. It help me understand each symbol one by one and other regex component and understanding how to create my own regex. If you find this interesting, take a look at my other projects and view my profile.
 
 [Github Repo](https://github.com/VanessaLiaw021)
