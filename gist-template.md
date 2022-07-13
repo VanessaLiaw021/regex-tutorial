@@ -64,13 +64,20 @@ Group constructs are consider the regex in the (). They represent should be capt
 ([a-z0-9_\.-]+) and ([\da-z\.-]+) and ([a-z\.]{2,6})
 ```
 
-First, we start with this section of regex, ([a-z0-9_\.-]+). This will match the email username. a-z allow letters from a-z. 0-9 allow numbers from 0-9. The _ and - allows underscore and hypen in your email username. 
-
-Next, we start with this section of regex, ([\da-z\.-]+). This will match the email service provider, such as gmail, yahoo, outlook, etc. 
-
-Lastly, we look at ([a-z\.]{2,6}). This will match the top level domain, such as .com, .net., .gov, and etc. As mention before, a-z will allow letters from a-z, but allow the range {2,6} from 2 to 6 characters long.
+First, we start with this section of regex, ([a-z0-9_\.-]+). This will match the email username. Next, we start with this section of regex, ([\da-z\.-]+). This will match the email service provider, such as gmail, yahoo, outlook, etc. 
+Lastly, we look at ([a-z\.]{2,6}). This will match the top level domain, such as .com, .net., .gov, and etc. In the next section, I will explain the characters in the (), which are known as subexpression.
 
 ### Bracket Expressions
+
+As we mention before, this section I will explain that is happening in the (). 
+
+```
+([a-z0-9_\.-]+) and ([\da-z\.-]+) and ([a-z\.]{2,6})
+```
+
+Let's take a look at the first expression in this regex, ([a-z0-9_\.-]+). As we can see, within the (), we see something call a bracket expression, []. The bracket indicates a set of characters that we're trying to match in the expression. Let's start with the a-z, this can include any characters between a-z in the email. Often, we will also see 0-9, which is similar to a-z, but instead it including any numbers between 0-9. Next, we see a dash (-) and hyphen (_), this mean that in the email address it can include hypen and dash. The   hypen and dash are consider special charcters. Special characters are consider non-alphanumeric charcters.
+
+Now, let take a look at the next expression ([\da-z\.-]+). As we can see, there is another [] in this expression, where it is matching the email service provider, that can include alphabet from a-z. and can include a dash. In the next section, we will learn about the \d and \ .
 
 ### Character Classes
 
