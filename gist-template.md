@@ -26,6 +26,14 @@ This regex expression is one way to match a email, but there other many differen
 
 ## Regex Components
 
+In regex, the patterns need to always be enclosed with a slashed characters (/) since regex is considered a literal. As we can see in the regex below, we can see that it is enclosed with a slashed at the beginning and ending.
+
+```
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/. 
+```
+
+In this tutorial, I will break down each component of regex by anchors, quantifiers, group constructs, bracket expression, character classes, the OR operator, flags, and character escaptes.
+
 ### Anchors
 
 ### Quantifiers
@@ -44,4 +52,6 @@ This regex expression is one way to match a email, but there other many differen
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Vanessa Liaw and I am learning regex while I am explaining through this regex tutorial. It help me understand each symbol one by one and other regex component and understanding how to create my own regex. If you find this interesting, take a look at my other projects
+
+[Github Repo](https://github.com/VanessaLiaw021)
