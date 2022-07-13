@@ -36,6 +36,14 @@ In this tutorial, I will break down each component of regex by anchors, quantifi
 
 ### Anchors
 
+In regex, anchors are consider tokens that doesn't match any characters but it indicate something about the string or the matching method despite not matching any characters. Anchonrs let us know the current position in the string corresponds to a certain location, such as a beginning or ending of a string or line.
+
+```
+^ and $
+```
+
+To understand anchors a little better, the beginning symbol in regex is ^. The symbol ^ represent the beginning of a string. You must wonder if there is a beginning, there must be an ending symbol, which there is. The symbol that represent the ending of a string is $. 
+
 ### Quantifiers
 
 ### Grouping Constructs
